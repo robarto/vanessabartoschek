@@ -1,0 +1,144 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@font-face{
+  font-family: 'DINLight';
+  src: url('DINLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaragsÉ';
+  src: url('MaragsÉ.otf') format('opentype');
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'DINLight';
+  height: 25vh;
+}
+
+.left {
+  background-color: #f6e4ac;
+  width: 66.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px;
+}
+.right {
+  background-color: #e1a59c;
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description {
+  width: 50rem;
+  font-size: 1.5rem;
+}
+
+.description1 {
+  width: 50rem;
+  font-size: 1.2rem;
+  font-family: 'DINLight';
+}
+
+.citation {
+  font-family: 'MaragsÉ';
+  font-size: 1.5rem;
+}
+
+.begin {
+  color: #A7AAB3;
+}
+
+.end {
+  color: #d1714f;
+  font-size: 2.5rem;
+  position: absolute;
+  width: 25rem;
+}
+
+.mappe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  font-family: 'MaragsÉ';
+  /* height: 50vh; */
+}
+
+.mappe > .left {
+  width: 50%;
+  background-color: #fff;
+}
+
+.mappe > .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  background-color: #fff;
+  border-left: 0.7rem solid #d1714f;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'DINLight';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+}
+
+.footer > .left {
+  padding: 10px;
+}
