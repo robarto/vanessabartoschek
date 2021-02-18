@@ -5,17 +5,23 @@
 * Browsers: last 4 version
 */
 
-@font-face{
-  font-family: 'DINLight';
-  src: url('DINLight.ttf') format('truetype');
+@font-face {
+  font-family: "DINLight";
+  src: url("./DINLight.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'MaragsÉ';
-  src: url('MaragsÉ.otf') format('opentype');
+  font-family: "MaragsÉ";
+  src: url("./MaragsÉ.otf") format("opentype");
 }
 
-html, body {
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("./roboto-thin.ttf") format("truetype");
+}
+
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -29,71 +35,94 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-family: 'DINLight';
-  height: 25vh;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-family: "DINLight";
+  min-height: 25vh;
   width: 100%;
 }
 
 .left {
   background-color: #f6e4ac;
-  width: 66.6%;
+  flex-grow: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 25px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2rem;
 }
 .right {
   background-color: #e1a59c;
-  width: 33.3%;
+  flex-grow: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 720px) {
+  .header .right {
+    flex-grow: 0;
+  }
 }
 
 .description {
-  width: 25rem;
   font-size: 1.5rem;
 }
 
 .description1 {
-  width: 25rem;
   font-size: 1.2rem;
-  font-family: 'DINLight';
+  /* font-family: 'DINLight'; */
+  font-family: "Roboto-Thin", arial;
+}
+
+@media only screen and (min-width: 720px) {
+  .description,
+  .description1 {
+    width: 25rem;
+  }
 }
 
 .citation {
-  font-family: 'MaragsÉ';
+  font-family: "MaragsÉ";
   font-size: 1.5rem;
 }
 
+.portrait {
+  width: 100%;
+  max-width: 700px;
+  min-width: 200px;
+  margin: auto;
+}
+
 .begin {
-  color: #A7AAB3;
+  color: #a7aab3;
 }
 
 .end {
   color: #d1714f;
   font-size: 2.5rem;
   position: absolute;
-  width: 25rem;
+  max-width: 25rem;
+}
+@media only screen and (max-width: 720px) {
+  .end {
+    position: inherit;
+  }
 }
 
 .mappe {
@@ -102,16 +131,17 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   background-color: #fff;
-  font-family: 'MaragsÉ';
+  font-family: "MaragsÉ";
   /* height: 50vh; */
+  flex-wrap: wrap;
 }
 
 .mappe > .left {
-  width: 50%;
   background-color: #fff;
+  flex: 1;
 }
 
 .mappe > .right {
@@ -119,11 +149,28 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
+  -ms-flex-pack: center;
+  justify-content: center;
+
   background-color: #fff;
   border-left: 0.7rem solid #d1714f;
+  flex: 1;
+  width: 500px;
+  /* max-width: 100%; */
+  padding: 2rem;
+}
+@media only screen and (max-width: 720px) {
+  .mappe > .right {
+    border-left: 0;
+  }
+}
+@media only screen and (min-width: 520px) {
+  .mappe .right {
+    min-width: 400px;
+  }
+  .mappe .left {
+    min-width: 500px;
+  }
 }
 
 .footer {
@@ -132,15 +179,22 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-family: 'DINLight';
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-family: "Roboto-Thin";
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 150px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 150px;
+  width: 100%;
 }
 
 .footer > .left {
-  padding: 10px;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .footer > .right {
+    display: none;
+  }
 }
